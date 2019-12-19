@@ -1,0 +1,513 @@
+body {
+  background-color: #232B2B;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* height: 100vh; */
+  color: #eee;
+  /* font-size: 160%; */
+  /* font-family: 'Caveat', cursive; */
+  /* font-family: 'Marck Script', cursive; */
+  font-family: 'Cormorant Infant', serif;
+}
+
+/* @import url('https://fonts.googleapis.com/css?family=Arimo'); */
+nav {
+  margin-bottom: 4%;
+}
+.otstup {
+  height: 130px;
+  /* max-height: 400px; */
+}
+.top-menu {
+  width: 100%;
+  background: #20202080;
+  box-shadow: 3px 0 7px rgba(0,0,0,.3);
+  padding: 20px;
+  position: fixed;
+  top: 0px;
+  z-index: 99;
+  /* display: flex; */
+}
+.top-menu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.navbar-logo {
+  display: inline-block;
+  transition: 0.25s linear;
+}
+.navbar-logo img {
+width: 47%;
+}
+.navbar-logo:hover {
+  opacity: 0.8;
+}
+.menu-main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+.menu-main li {display: inline-block;}
+.menu-main a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  line-height: 61px;
+  padding-left: 20px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #cabe1d;
+  transition:.5s linear;
+}
+.menu-main a:before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: #cabe1d;
+  position: absolute;
+  left: 50%;
+  transform: rotate(45deg) translateX(6.5px);
+  opacity: 0;
+  transition: .5s linear;
+}
+.menu-main a:hover:before {opacity: 1;}
+.menu-main a:hover {
+  transform: scale(0.9);
+}
+@media (max-width: 660px) {
+.menu-main {
+  /* float: none; */
+  padding-top: 20px;
+}
+.top-menu {
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+.menu-main a {padding: 0 10px;}
+.menu-main a:before {transform: rotate(45deg) translateX(-6px);}
+}
+@media (max-width: 600px) {
+/* .menu-main li {display: block;} */
+}
+
+
+
+
+
+
+
+
+
+
+.otstup {
+  /* height: 100%; */
+}
+/* main {
+  margin: 10% 0 0 0;
+} */
+.page {
+  /* height: 100vh; */
+  /* background-color: brown; */
+}
+.header {
+  padding-top: 1%;
+  padding-left: 1%;
+  padding-bottom: 1%;
+  height: 8%;
+  font-size: 35px;
+  /* background-color: chocolate; */
+}
+.body {
+  padding-top: 1%;
+  padding-left: 1%;
+  font-size: 125%;
+  /* width: 600px; */
+  display: flex;
+}
+.text {
+  width: 45%;
+  padding: 1% 1% 1% 1%;
+  text-align: justify;
+}
+.image img {
+  float: right;
+  margin: 0 2% 0 0;
+  width: 60%;
+  border-radius: 9px;
+  opacity: 0.9;
+  transition: 0.3s linear;
+  box-shadow: 0px 0px 7px 2px #00000080;
+}
+.image img:hover {
+  box-shadow: 0px 0px 15px 4px #00000080;
+  opacity: 1;
+  /* transform: rotateZ(360deg); */
+  /* transform: scale(1.7); */
+}
+
+
+.fixed-button {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  transition: 0.4s linear;
+}
+.footer {
+  width: 3%;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  height: 8%;
+  transition: 0.4s linear;
+}
+.fixed-button {
+  z-index: 99;
+
+}
+.footer a, .fixed-button a {
+  padding: 0 11px 0 11px;
+  text-decoration: none;
+  color: black;
+  background-color: grey;
+  opacity: 0.7;
+  border-radius: 5px;
+  font-size: 40px;
+}
+.footer a:hover, .fixed-button a:hover {
+  opacity: 0.9;
+  background-color: rgb(91, 100, 100);
+}
+
+
+
+
+/* Собственно сам слайдер */
+.slider{
+  max-width: 50%;
+  position: relative;
+  
+  height: 150px;
+  margin-bottom: 130px;
+  /* margin: auto; */
+}
+.item {
+  /* width: 200%; */
+}
+
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .item img {
+  object-fit: cover;
+  /* height: 100%; */
+  width: 100%;
+  border-radius: 10px;
+  max-height: 300px;
+}
+
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+  cursor: pointer;
+  position: absolute;
+  /* top: 0; */
+  top: 60%;
+  width: auto;
+  /* margin-top: -22px; */
+  padding: 3%;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  z-index: 1;
+}
+
+
+.slider .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+/* При наведении на кнопки добавляем фон кнопок */
+
+.slider .prev:hover,
+.slider .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Заголовок слайда */
+.slideText {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  font-size: 35px;
+  /* Выравнивание текста по горизонтали и по вертикали*/
+  left: 50%;
+  top: 81%;
+  transform: translate(-50%, -50%);
+  /* Тень*/
+  text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+}
+
+.item a:hover img{
+  opacity: 0.5;
+}
+/* .slideText:hover .img-slider {
+  opacity: 0.5;
+} */
+.slider a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Кружочки */
+/* .slider-dots {
+text-align: center;
+}
+.slider-dots_item{
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active,
+.slider-dots_item:hover {
+  background-color: #aaa;
+} */
+
+
+/* Анимация слайдов */
+
+.slider .item {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+      opacity: .4
+  }
+  to {
+      opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+      opacity: .4
+  }
+  to {
+      opacity: 1
+  }
+}
+
+.mainer-magic {
+  width: 50%;
+  padding: 2% 2% 2% 2%;
+}
+#button {
+  font-size: 100%;
+  color: rgb(177, 170, 170);
+  background-color: rgba(0, 0, 0, 0.178);
+  border-radius: 4px;
+  padding: 1% 1% 1% 1%;
+  border: none;
+  transition: 0.25s linear;
+}
+#button:hover {
+  background-color: rgb(30, 30, 30);
+/* box-shadow: inset 0 0 0 1px #2f2f2f; */
+transition: 1s linear;
+}
+
+
+.container0, .container1, .container2, .container3, .container4, .container5 {
+  width: 13%;
+  position: relative;  
+  perspective: 1000px;
+  border-radius: 4px;
+  margin: auto;
+}
+.container0:hover, .container1:hover, .container2:hover, .container3:hover, .container4:hover, .container5:hover {
+  box-shadow: 0 0 6px 5px rgb(26, 26, 26);
+}
+.card0, .card1, .card2, .card3, .card4, .card5 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition:  0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #47525D;
+}
+.front {
+  background: url(/img/card-back.jpeg);
+  background-size: 100%;
+}
+.back, .flipped {
+  transform: rotateY(180deg);
+  background: #e9e9e9;
+  text-align: center;
+  padding: 0 1% 0 1%;
+  box-shadow: inset 0 0 2px 1px #000;
+}
+
+
+
+
+.video {
+  width: 100%;
+  /* padding: 2% 2% 2% 2%; */
+  border-radius: 30px;
+  opacity: 0.7;
+}
+.video:hover {
+  opacity: 1;
+}
+@media(max-width: 800px) {
+  .video {
+    max-height: 240px;
+    max-width: 450px;
+  }
+  body {
+    font-size: 75%;
+  }
+
+}
+.contacs-mail {
+  width: 50%;
+  /* display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr 1fr; */
+}
+.message-theme {
+  width: 50%;
+  float: right;
+  padding-bottom: 2%;
+}
+.message-theme input, .sender-name input, .message-text textarea, .message-button button {
+  font-size: 100%;
+  color: rgb(177, 170, 170);
+  background-color: rgba(0, 0, 0, 0.178);
+  border-radius: 4px;
+  padding: 1% 1% 1% 1%;
+  border: none;
+  transition: 0.25s linear;
+}
+.message-theme input {
+  width: 100%;
+}
+.sender-name {
+  width: 50%;
+}
+.sender-name input {
+  width: 60%;
+}
+.message-text {
+  width: 100%;
+  /* height: 40vh; */
+}
+.message-text textarea {
+  width: 100%;
+  height: 40%;
+}
+.message-button {
+  float: right;
+}
+.message-button button {
+  /* padding-top: 5%; */
+  margin-top: 1%;
+}
+.sender-name input:hover, .message-theme input:hover, .message-text textarea:hover, .message-button button:hover {
+  background-color: rgb(30, 30, 30);
+}
+.message-button button:hover {
+  background-color: rgb(30, 30, 30);
+/* box-shadow: inset 0 0 0 1px #2f2f2f; */
+transition: 1s linear;
+}
+
+
+.main-registration {
+  width: 65%;
+  height: 300px;
+  margin: 6% auto auto auto;
+}
+.main-registration-text, .main-registration-input {
+  width: 50%;
+  height: 10%;
+  margin: 0% 0% 2% 0%;
+}
+.main-registration-text {
+  float: left;
+}
+.main-registration-text a {
+  color: #eee;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-decoration: underline;
+}
+.main-registration-text a:hover {
+  color: rgb(218, 204, 18);
+}
+.main-registration-input {
+  float: right;
+}
+.main-registration-input input {
+  width: 100%;
+  height: 100%;
+  padding: 0% 1.5% 0% 1.5%;
+  border: none;
+  background-color: #eee;
+  color: rgb(99, 99, 99);
+  border-radius: 10px;
+  transition: 0.25s linear;
+}
+.main-registration-input input:hover {
+  background-color: rgb(146, 143, 143);
+  transform: scale(1.1);
+}
+.main-registration-submit {
+  float: right;
+  width: 50%;
+  height: 10%;
+  transition: 0.25s linear;
+}
+.main-registration-button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  transition: 0.25s linear;
+  color: rgb(34, 34, 34);
+
+}
+.main-registration-button:hover {
+  background-color: rgb(146, 143, 143);
+  transform: scale(1.1);
+}
