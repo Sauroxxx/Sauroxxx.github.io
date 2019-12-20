@@ -11,54 +11,104 @@
 
         <!-- Put this script tag to the <head> of your page -->
         <script type="text/javascript" src="https://vk.com/js/api/openapi.js?162"></script>
-
         <script type="text/javascript">
             VK.init({apiId: 7253174, onlyWidgets: true});
         </script>
         
     </head>
     <body>
+        <div class="fixed-button"><a href="#index">↑</a></div>
 
+
+
+
+
+
+        <nav style="position: fixed; margin-top: 0px; width: 100%; z-index: 99;">
+        
+            <ul>
+                <li><a class="navbar-logo" href="#"><img src="/img/logo.png"></a></li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#obo_mne">Обо мне</a></li>
+                <li><a href="#online-future">Онлайн-предсказатель</a></li>
+                <li><a href="">Другое</a>        
+                    <!-- первый уровень выпадающего списка -->
+                    <ul>
+                        <li><a href="#contacs">Контакты</a></li>
+                        <li><a href="#future">Предсказания</a></li>
+                        <li><a href="#mans">Мануал по гаданию</a></li>
+                        <li><a href="#comments">Комментарии</a></li>
+                    </ul>        
+                </li>
+                <li><a href="entrance.html">Аккаунт</a>
+                    <!-- первый уровень выпадающего списка -->
+                    <ul>
+                        <li><a href="registration.html">Регистрация</a></li>
+                        <li><a href="entrance.html">Вход</a></li>
+                        <li><a href="recover.html">Восстановление пароля</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Второе меню нужно для отступа, т.к. первое fixed, то страница улетает вверх. И для кнопки вверх -->
+        <nav id="index">
+        
+            <ul>
+                <li><a class="navbar-logo" href="#"><img src="/img/logo.png"></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">WordPress</a>
+        
+                    <!-- первый уровень выпадающего списка -->
+                    <ul>
+                        <li><a href="#">Themes</a></li>
+                        <li><a href="#">Plugins</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                    </ul>
+        
+                </li>
+                <li><a href="#">Graphic Design</a></li>
+                <li><a href="#">Inspiration</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
         
 
-
-        <div class="fixed-button"><a href="#">↑</a></div>
-        
-        <nav>
-            <div class="top-menu otstup">
+        <!-- <nav>
+            <div id="index" class="top-menu" style="position: static;">
                 <a class="navbar-logo" href="#"><img src="/img/logo.png"></a>
                 <ul class="menu-main">
                     <li><a href="index.html">Главная</a></li>
+                        <ul class="ul-in-li">
+                            <li class="li-in-li"><a href="#">Point 1</a></li>
+                            <li class="li-in-li"><a href="#">Point 2</a></li>
+                        </ul> -->
                     <!-- <li><a href="index.html#obo_mne">Обо мне</a></li>
                     <li><a href="index.html#future">Предсказания</a></li>
                     <li><a href="index.html#contacs">Контакты</a></li>
                     <li><a href="index.html#online-future">Онлайн-предсказатель</a></li>
                     <li><a href="index.html#mans">Мануал по гаданию</a></li> -->
+                    <!-- <li><a href="index.html#">Прайс</a></li>
+                    <li><a href="entrance.html">Вход</a></li>
+                    <li><a href="registration.html">Регистрация</a></li>
+                    <li><a></a></li>
+                </ul>
+            </div>
+        </nav> -->
+      
+        <!-- <nav>
+            <div class="top-menu">
+                <a class="navbar-logo" гаданиюhref="#"><img src="/img/logo.png"></a>
+                <ul class="menu-main">
+                    <li><a href="index.html">Главная</a></li>
                     <li><a href="index.html#">Прайс</a></li>
                     <li><a href="entrance.html">Вход</a></li>
                     <li><a href="registration.html">Регистрация</a></li>
                     <li><a></a></li>
                 </ul>
             </div>
-        </nav>
-
-
-
-        <!-- <nav role="navigation">
-            <ul class="ul">
-                <li><a href="#">One</a></li>
-                <li><a href="#">Two</a>
-                    <ul class="dropdown">
-                    <li><a href="#">Sub-1</a></li>
-                    <li><a href="#">Sub-2</a></li>
-                    <li><a href="#">Sub-3</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Three</a></li>
-            </ul>
         </nav> -->
-      
-      
 
         <!-- ←, →, ↑, ↓. -->
         <!-- Skills: Гипноз, вуду, Развод на деньги -->
@@ -189,6 +239,13 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="header">Онлайн-предсказатель 2</div>
+                <div class="body">
+                    <div class="future2">
+                        <div id="result">Текст</div>        
+                    </div>
+                </div>
                 <div class="footer"><a href="#mans">↓</a></div>
             </div>
 
@@ -200,28 +257,36 @@
                             <source src="img/cards.mp4" type="video/mp4">
                         </video controls>
                     </div>
-                    <div class="text" style="width: 60%;">
-                        Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. 
-                        Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. 
+                    <div class="text" style="width: 60%; margin: auto;">
+                        Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                        totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. 
+                        Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                        totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. 
                     </div>
                 </div>
+                <div class="footer"><a href="#comments">↓</a></div>
             </div>
 
-            <div class="page" id="mans">
+            <div class="page" id="comments">
                 <div class="header">Комментарии</div>
-                <div class="body">
-                    
+                <div class="body">                    
                     <div class="comments" style="width: 60%;">
-
                         <!-- Put this div tag to the place, where the Comments block will be -->
                         <div id="vk_comments"></div>
-                        <div></div>
                         <script type="text/javascript">
                             VK.Widgets.Comments("vk_comments", {limit: 10, attach: false});
                         </script>
                     </div>
                 </div>
             </div>
+
+            <div class="page">
+                <div class="body">                    
+                    
+                </div>
+            </div>
+
+            <div class="main-footer"></div>
         </main>
 
     <script src="/js/jquery-3.4.1.js"></script>

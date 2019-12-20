@@ -9,32 +9,67 @@
         <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant&display=swap" rel="stylesheet">
     </head>
     <body>
-
-       <nav class="top-menu">
-            <a class="navbar-logo" href="#"><img src="/img/logo.png"></a>
-            <ul class="menu-main">
+        <nav style="position: fixed; margin-top: 0px; width: 100%; z-index: 99;">
+        
+            <ul>
+                <li><a class="navbar-logo" href="#"><img src="/img/logo.png"></a></li>
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="index.html#obo_mne">Обо мне</a></li>
-                <li><a href="index.html#future">Предсказания</a></li>
-                <li><a href="index.html#contacs">Контакты</a></li>
                 <li><a href="index.html#online-future">Онлайн-предсказатель</a></li>
-                <li><a href="index.html#mans">Мануал по гаданию</a></li>
-                <li><a href="entrance.html">Вход</a></li>
-                <li><a href="registration.html">Регистрация</a></li>
+                <li><a href="">Другое</a>        
+                    <!-- первый уровень выпадающего списка -->
+                    <ul>
+                        <li><a href="index.html#contacs">Контакты</a></li>
+                        <li><a href="index.html#future">Предсказания</a></li>
+                        <li><a href="index.html#mans">Мануал по гаданию</a></li>
+                        <li><a href="index.html#comments">Комментарии</a></li>
+                    </ul>        
+                </li>
+                <li><a href="entrance.html">Аккаунт</a>
+                    <!-- первый уровень выпадающего списка -->
+                    <ul>
+                        <li><a href="registration.html">Регистрация</a></li>
+                        <li><a href="recover.html">Восстановление пароля</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Второе меню нужно для отступа, т.к. первое fixed, то страница улетает вверх. И для кнопки вверх -->
+        <nav id="index">
+        
+            <ul>
+                <li><a class="navbar-logo" href="#"><img src="/img/logo.png"></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">WordPress</a>
+        
+                    <!-- первый уровень выпадающего списка -->
+                    <ul>
+                        <li><a href="#">Themes</a></li>
+                        <li><a href="#">Plugins</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                    </ul>
+        
+                </li>
+                <li><a href="#">Graphic Design</a></li>
+                <li><a href="#">Inspiration</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
             </ul>
         </nav>
 
         <main>
             <form>
+                    <div class="otstup"></div>
                 <div class="main-registration">
                     
                     <div class="main-registration-text">Телефон:</div>
-                    <div class="main-registration-input"><input type="number"></div>
+                    <div class="main-registration-input"><input style="width:10%; margin-right: 2%;" placeholder="+7"><input style="width:30%;" placeholder="xxx"><input style="width:40%; margin-left: 2%;"  placeholder="xxx-xx-xx"></div>
 
                     <div class="main-registration-text">Пароль:</div>
                     <div class="main-registration-input"><input type="password"></div>
 
-                    <div class="main-registration-text"><a href="registration.html">Регистрация</a></div>
+                    <div class="main-registration-text"><a href="registration.html">Регистрация</a>/<a href="recover.html">Восстановление пароля</a></div>
                     <div class="main-registration-submit"><button class="main-registration-button">Вход</button></div>
                 </div>
             </form>

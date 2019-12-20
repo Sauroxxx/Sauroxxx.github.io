@@ -1,9 +1,9 @@
 $(function(){
-    $('.top-menu').height($('.top-main').height());
-
-    // $(window).resize(function(){
-    //     $('.top-menu').height($('.top-main').margin());
-    // });
+    $("a[href^='#']").click(function(){
+            var _href = $(this).attr("href");
+            $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 900);
+            return false;
+    });
 });
 
 
@@ -45,6 +45,7 @@ function showSlides(n) {
 }
 
 
+
 // function getRandomArbitary(min, max)
 // {
 //   document.getElementById("info") = Math.random() * (max - min) + min;
@@ -71,6 +72,33 @@ function showSlides(n) {
 //   answerText.classList.remove(document.getElementsByClassName('answer'));
 // });
 
+document.getElementById('result').onclick = function click() {
+    var eventbutton = '';
+    var answers = [
+        'На тебя упадет рояль, если не перевести на счет xxxx-xxxx-xxxx-xxxx 500 рублей', 
+        'Завтра тебе повысят зарплату, если ты положишь на счет xxxx-xxxx-xxxx-xxxx 2000 руб', 
+        'Ты выиграл машину, позвони на номер 4444, чтобы забрать приз!!', 
+        'Тебе стоит перевести деньги на сайт gadalka.com, иначе тебя покинет удача',
+        'На тебе лежит проклятие, снять его можно, позвонив на номер x-(xxx)-xxx-xx-xx', 
+        'Ваша судьба неясна...', 
+        'Если попробуешь еще удача тебе улыбнется;)'];
+
+    eventbutton = Math.floor(Math.random() * 6);
+    document.getElementById('result').innerHTML = answers[eventbutton];
+    // document.getElementById('result').onwheel;
+    $('.result').toggleClass('.anim-fut')
+
+}
+
+
+$(function(){
+    $('.container').height($('.container').width()*1.4);
+
+    $(window).resize(function(){
+        $('.container').height($('.container').width()*1.4);
+    });
+});
+
 
 $('.container0').on('click', function () {
     $('.card0').toggleClass('flipped');
@@ -95,22 +123,3 @@ $('.container4').on('click', function () {
 $('.container5').on('click', function () {
     $('.card5').toggleClass('flipped');
 });
-
-
-$(function(){
-    $('.container').height($('.container').width()*1.4);
-
-    $(window).resize(function(){
-        $('.container').height($('.container').width()*1.4);
-    });
-});
-
-
-
-// $(function(){
-//     $('.video').height($('.video').width()*0.75);
-
-//     $(window).resize(function(){
-//         $('.video').height($('.video').width()*0.75);
-//     });
-// });
